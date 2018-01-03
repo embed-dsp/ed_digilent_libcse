@@ -46,3 +46,10 @@ sudo make install M=32 PACKAGE_VERSION=2.5.2 XILINX=/opt/Xilinx/14.7
 ```
 
 The build products are installed in the following locations:
+```bash
+# 64-bit libraries for Linux
+/opt/Xilinx/14.7/ISE_DS/ISE/lib/lin64/plugins/Digilent/libCseDigilent
+
+# 32-bit libraries for Linux
+/opt/Xilinx/14.7/ISE_DS/ISE/lib/lin/plugins/Digilent/libCseDigilent
+```
