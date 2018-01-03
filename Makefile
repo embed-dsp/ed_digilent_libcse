@@ -39,32 +39,15 @@ endif
 
 all:
 	@echo ""
-	@echo "# Show information about variables"
-	@echo "make info [M=...] [PACKAGE_VERSION=...] [XILINX=...]"
-	@echo ""
 	@echo "# Unpack plugin into build directory"
 	@echo "make prepare [M=...] [PACKAGE_VERSION=...]"
 	@echo ""
 	@echo "# Install plugin"
-	@echo "make install [M=...] [PACKAGE_VERSION=...] [XILINX=...]"
+	@echo "sudo make install [M=...] [PACKAGE_VERSION=...] [XILINX=...]"
 	@echo ""
 	@echo "# Remove build directory"
 	@echo "make clean"
 	@echo ""
-
-
-.PHONY: info
-info:
-	@echo "M               = $(M)"
-	@echo "PACKAGE_VERSION = $(PACKAGE_VERSION)"
-	@echo "PACKAGE         = $(PACKAGE)"
-	@echo "XILINX          = $(XILINX)"
-	@echo "CSE_PLUGIN_DIR  = $(CSE_PLUGIN_DIR)"
-
-
-.PHONY: clean
-clean:
-	-rm -rf build
 
 
 .PHONY: prepare
@@ -77,3 +60,8 @@ prepare:
 install:
 	-mkdir -p $(CSE_PLUGIN_DIR)
 	cp build/$(PACKAGE)/$(XXX)/plugin/* $(CSE_PLUGIN_DIR)
+
+
+.PHONY: clean
+clean:
+	-rm -rf build
