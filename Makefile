@@ -6,13 +6,16 @@
 # $Date:     $
 # $Revision: $
 
+
+# Package version.
+PACKAGE_VERSION = 2.5.2
+
+# Xilinx installation directory.
+XILINX = /opt/Xilinx/14.7
+XXX = ISE14x
+
 ifeq ($(M),)
 	M = 64
-endif
-
-
-ifeq ($(PACKAGE_VERSION),)
-	PACKAGE_VERSION = 2.5.2
 endif
 
 ifeq ($(M), 64)
@@ -20,15 +23,6 @@ ifeq ($(M), 64)
 else
 	PACKAGE = libCseDigilent_$(PACKAGE_VERSION)-i686
 endif
-
-
-ifeq ($(XILINX),)
-	XILINX = /opt/Xilinx/14.7
-endif
-
-# FIXME:
-XXX = ISE14x
-
 
 ifeq ($(M), 64)
 	CSE_PLUGIN_DIR = $(XILINX)/ISE_DS/ISE/lib/lin64/plugins/Digilent/libCseDigilent
@@ -40,10 +34,10 @@ endif
 all:
 	@echo ""
 	@echo "# Unpack plugin into build directory"
-	@echo "make prepare [M=...] [PACKAGE_VERSION=...]"
+	@echo "make prepare [M=...]"
 	@echo ""
 	@echo "# Install plugin"
-	@echo "sudo make install [M=...] [PACKAGE_VERSION=...] [XILINX=...]"
+	@echo "sudo make install [M=...]"
 	@echo ""
 	@echo "# Remove build directory"
 	@echo "make clean"
