@@ -20,29 +20,36 @@ cd ed_digilent_libcse
 
 # Open Web Browser and download the Digilent Plugin source.
 https://reference.digilentinc.com/reference/software/digilent-plugin-xilinx-tools/start
+
+# Edit the Makefile for selecting the Digilent Plugin version.
+vim Makefile
+PACKAGE_VERSION = 2.5.2
+
+# Edit the Makefile for selecting the Xilinx installation directory.
+vim Makefile
+XILINX = /opt/Xilinx/14.7
 ```
 
 Build
 =====
 ```bash
-# Unpack 64-bit source code into build/ directory (Default: M=64, PACKAGE_VERSION=2.5.2)
+# Unpack 64-bit source code into build/ directory (Default: M=64)
 make prepare
-make prepare M=64 PACKAGE_VERSION=2.5.2
+make prepare M=64
 
 # Unpack 32-bit source code into build/ directory.
 make prepare M=32
-make prepare M=32 PACKAGE_VERSION=2.5.2
 ```
 
 Install
 =======
 ```bash
-# Install 64-bit build products (Default: M=64, PACKAGE_VERSION=2.5.2, XILINX=/opt/Xilinx/14.7)
+# Install 64-bit build products (Default: M=64)
 sudo make install
-sudo make install M=64 PACKAGE_VERSION=2.5.2 XILINX=/opt/Xilinx/14.7
+sudo make install M=64
 
 # Install 32-bit build products.
-sudo make install M=32 PACKAGE_VERSION=2.5.2 XILINX=/opt/Xilinx/14.7
+sudo make install M=32
 ```
 
 The build products are installed in the following locations:
