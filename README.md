@@ -2,11 +2,11 @@
 Install of Digilent Plugin for Xilinx Tools
 ===========================================
 
-This repository contains make file for easy install of the Digilent Plugin for Xilinx Tools.
+This repository contains make file for easy install of the [Digilent Plugin](https://reference.digilentinc.com/reference/software/digilent-plugin-xilinx-tools/start) for Xilinx Tools.
 These plugins enable ISE 12.x, 13.x and 14.x to use USB-JTAG with iMPACT, ChipScope, XMD and EDK.
 
-Get tool and source code
-========================
+Get Source Code
+===============
 
 ## ed_digilent_libcse
 ```bash
