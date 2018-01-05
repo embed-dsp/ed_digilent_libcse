@@ -13,7 +13,7 @@ Get Source Code
 git clone https://github.com/embed-dsp/ed_digilent_libcse.git
 ```
 
-## Digilent Plugin Source
+## Digilent Plugin
 ```bash
 # Enter the ed_digilent_libcse directory.
 cd ed_digilent_libcse
