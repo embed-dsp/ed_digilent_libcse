@@ -14,6 +14,8 @@ PACKAGE_VERSION = 2.5.2
 XILINX = /opt/Xilinx/14.7
 XXX = ISE14x
 
+# ==============================================================================
+
 # Build for 32-bit or 64-bit (Default)
 ifeq ($(M),)
 	M = 64
