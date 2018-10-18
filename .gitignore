@@ -1,11 +1,7 @@
 
-# Directories ...
+# Copyright (c) 2018-2023 embed-dsp, All Rights Reserved.
+# Author: Gudmundur Bogason <gb@embed-dsp.com>
+
+# Directories
 build/
-tmp/
 src/
-
-# Backup files
-*~
-
-# Misc files
-*.tar.gz

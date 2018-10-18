@@ -1,18 +1,17 @@
 
-# Copyright (c) 2018 embed-dsp
-# All Rights Reserved
-
-# $Author:   Gudmundur Bogason <gb@embed-dsp.com> $
-# $Date:     $
-# $Revision: $
+# Copyright (c) 2018-2023 embed-dsp, All Rights Reserved.
+# Author: Gudmundur Bogason <gb@embed-dsp.com>
 
 
 # Package version.
 PACKAGE_VERSION = 2.5.2
 
 # Xilinx installation directory.
+# XILINX = /opt/Xilinx/14.4
 XILINX = /opt/Xilinx/14.7
 XXX = ISE14x
+
+# ==============================================================================
 
 # Build for 32-bit or 64-bit (Default)
 ifeq ($(M),)
@@ -29,6 +28,7 @@ endif
 
 
 all:
+	@echo "CSE_PLUGIN_DIR = $(CSE_PLUGIN_DIR)"
 	@echo ""
 	@echo "## Build"
 	@echo "make prepare [M=...]"
@@ -47,7 +47,7 @@ all:
 .PHONY: prepare
 prepare:
 	-mkdir build
-	cd build && tar zxf ../$(PACKAGE).tar.gz
+	cd build && tar zxf ../src/$(PACKAGE).tar.gz
 
 
 .PHONY: install
