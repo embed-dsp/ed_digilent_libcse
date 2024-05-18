@@ -2,7 +2,7 @@
 # Install of Digilent Plugin for Xilinx Tools
 
 This repository contains a **make** file for easy install of the 
-[Digilent Plugin](https://digilent.com/reference/software/digilent-plugin-xilinx-tools/start?redirect=1)
+[Digilent Plugin](https://digilent.com/reference/software/digilent-plugin-xilinx-tools/start)
 for Xilinx Tools.
 
 The Digilent Plugin for Xilinx tools allows Xilinx **ISE** 12.x, 13.x and 14.x 
@@ -19,11 +19,7 @@ git clone https://github.com/embed-dsp/ed_digilent_libcse.git
 ```
 
 ## Digilent Plugin
-Open Web Browser and download the Digilent Plugin source and store in the **ed_digilent_libcse/src** directory.
-
-```bash
-https://digilent.com/reference/software/digilent-plugin-xilinx-tools/start?redirect=1
-```
+Open Web Browser and download the [Digilent Plugin](https://digilent.com/reference/software/digilent-plugin-xilinx-tools/start) source and store in the `ed_digilent_libcse/src` directory.
 
 ```bash
 # Enter the ed_digilent_libcse directory.
